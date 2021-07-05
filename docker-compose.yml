@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  thynk-requests-stats:
+    build: .
+    image: spring-boot-admin:latest
+    container_name: spring-boot-admin
+    restart: always
+    ports:
+      - 8088:8080
+    networks:
+      - spring-boot-admin-net
+
+networks:
+  spring-boot-admin-net:
+    name: spring-boot-admin-net

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+echo "Building projects..."
+./mvnw clean install -DskipTests
+
+echo "Spinning up Spring Boot Admin..."
+
+docker-compose up -d --build
+
+echo "Spring boot admin is ready on port 8088"
